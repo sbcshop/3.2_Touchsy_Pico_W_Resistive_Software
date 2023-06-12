@@ -27,9 +27,34 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 -	Operating Temperature is -20℃~70℃
 -	Storage Temperature is -30℃~80℃
 
-## Pinout
-
 ## Getting Started with 3.2 Touchsy Pico W Resistive
+### Pinout
+<img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/Touchsy%20Pico%20Res%20pinout.jpg">
+
+- (1) 3.2” Resistive Touch Display 
+
+- (2) Battery connector
+
+- (3) Additional GPIO breakout as JST PH
+
+- (4) SD card slot
+
+- (5) RPi Pico W
+
+- (6) Programmable Buttons
+
+- (7) Buzzer
+
+- (8) Power pins breakout 
+
+- (9) Type C input power
+
+### Interfacing 
+
+| Pico | Display | Function |
+|---|---|---|
+|GPIO | TFT_CS |Chip Select pin|
+
 
 
 
