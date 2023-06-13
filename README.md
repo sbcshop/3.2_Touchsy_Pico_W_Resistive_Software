@@ -49,13 +49,18 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 
 - (9) Type C input power
 
-### Interfacing 
+### Interfacing Info
 
 | Pico | Display | Function |
 |---|---|---|
 |GPIO | TFT_CS |Chip Select pin|
 
-
+## Documentation
+  * [Schematic](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/blob/main/Design%20Data/SCH%203.2%20Touchsy%20%20Pico%20w%20(Resistive).pdf)
+  * [Hardware Files](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/tree/main)
+  * [Step File](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/blob/main/Mechanical%20Data/STEP%20%203.2%20inch%20Touchsy%20based%20on%20PICO%20W%20(Resistive).step)
+  * [MicroPython getting started for RPI](https://docs.micropython.org/en/latest/rp2/quickref.html)
+  * [RP2040 Datasheet](https://github.com/sbcshop/HackyPi-Hardware/blob/main/Documents/rp2040-datasheet.pdf)
 
 
 ## Related Products
