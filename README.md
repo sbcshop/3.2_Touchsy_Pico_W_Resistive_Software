@@ -50,8 +50,34 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 - (9) Type C input power
 
 ### Interfacing Info
+TFT_CLK_PIN = const(6)
+TFT_MOSI_PIN = const(7)
+TFT_MISO_PIN = const(4)
 
-| Pico | Display | Function |
+TFT_CS_PIN = const(13)
+TFT_RST_PIN = const(14)
+TFT_DC_PIN = const(11)
+
+| Pico | Display | Code | Function |
+|---|---|---|
+|GPIO13 | CS | | Chip Select pin|
+|GPIO | TFT_CS | |Chip Select pin|
+|GPIO | TFT_CS | |Chip Select pin|
+|GPIO | TFT_CS | |Chip Select pin|
+
+| Pico | Touch | Function |
+|---|---|---|
+|GPIO | TFT_CS |Chip Select pin|
+
+| Pico | SD Card | Function |
+|---|---|---|
+|GPIO | TFT_CS |Chip Select pin|
+
+| Pico | Buttons | Function |
+|---|---|---|
+|GPIO | TFT_CS |Chip Select pin|
+
+| Pico | Buzzer | Function |
 |---|---|---|
 |GPIO | TFT_CS |Chip Select pin|
 
