@@ -59,7 +59,7 @@ TFT_RST_PIN = const(14)
 TFT_DC_PIN = const(11)
 
 | Pico | Display | Code | Function |
-|---|---|---|
+|---|---|---|---|
 |GPIO13 | CS | | Chip Select pin|
 |GPIO | TFT_CS | |Chip Select pin|
 |GPIO | TFT_CS | |Chip Select pin|
