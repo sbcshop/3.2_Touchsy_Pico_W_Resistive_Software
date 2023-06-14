@@ -50,40 +50,54 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 - (9) Type C input power
 
 ### Interfacing Details
-Display and Resistive Touch controller interfacing with Pico W
-| Pico W | Display | Code variables | Function |
-|---|---|---|---|
-|GP6  | DC/SCL SPI | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
-|GP7  | SDI SPI/SDA | TFT_MOSI_PIN | MOSI (Master OUT Slave IN) pin of SPI interface|
-|GP13 | CS/SPI CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
-|GP11 | WR/SPI D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
-|GP14 | RESET | TFT_RST_PIN  | Display Reset pin|
+- Display and Resistive Touch controller interfacing with Pico W
+  | Pico W | Display | Code variables | Function |
+  |---|---|---|---|
+  |GP6  | DC/SCL SPI | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
+  |GP7  | SDI SPI/SDA | TFT_MOSI_PIN | MOSI (Master OUT Slave IN) pin of SPI interface|
+  |GP13 | CS/SPI CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
+  |GP11 | WR/SPI D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
+  |GP14 | RESET | TFT_RST_PIN  | Display Reset pin|
 
-| Pico W | Touch | Code variables | Function |
-|---|---|---|---|
-|GP2 | DCLK | XPT_CLK_PIN  |Clock pin of SPI interface for touch controller|
-|GP3 | DIN | XPT_MOSI_PIN | MOSI (Master OUT Slave IN) data pin of SPI interface|
-|GP4 | DOUT | XPT_MISO_PIN   | MISO (Master IN Slave OUT) data pin of SPI interface|
-|GP5 | CS | XPT_CS_PIN   | Chip Select pin of SPI interface|
-|GP10 | PENIRQ | XPT_INT | Touch controller Interrupt pin|
+  | Pico W | Resistive Touch | Code variables | Function |
+  |---|---|---|---|
+  |GP2 | DCLK | XPT_CLK_PIN  |Clock pin of SPI interface for touch controller|
+  |GP3 | DIN | XPT_MOSI_PIN | MOSI (Master OUT Slave IN) data pin of SPI interface|
+  |GP4 | DOUT | XPT_MISO_PIN   | MISO (Master IN Slave OUT) data pin of SPI interface|
+  |GP5 | CS | XPT_CS_PIN   | Chip Select pin of SPI interface|
+  |GP10 | PENIRQ | XPT_INT | Touch controller Interrupt pin|
 
 
-spi=SPI(0,sck=Pin(18),mosi=Pin(19),miso=Pin(16))
+- Pico W and micro SD card interfacing
 
-| Pico | microSD Card | Function |
-|---|---|---|
-|GP18 | SCLK |Clock pin of SPI interface for microSD card |
-|GP19 | DIN  | MOSI (Master OUT Slave IN) data pin of SPI interface|
-|GP16 | DOUT | MISO (Master IN Slave OUT) data pin of SPI interface|
-|GP17 | CS   | Chip Select pin of SPI interface|
+  | Pico W | microSD Card | Function |
+  |---|---|---|
+  |GP18 | SCLK |Clock pin of SPI interface for microSD card |
+  |GP19 | DIN  | MOSI (Master OUT Slave IN) data pin of SPI interface|
+  |GP16 | DOUT | MISO (Master IN Slave OUT) data pin of SPI interface|
+  |GP17 | CS   | Chip Select pin of SPI interface|
 
-| Pico | Buttons | Function |
-|---|---|---|
-|GPIO | TFT_CS |Chip Select pin|
+- Buttons, Buzzer and LED Interfacing with Pico W
+  | Pico W | Buttons | Function |
+  |---|---|---|
+  |GP9 | BT1 |Programmable button|
+  |GP26 | BT2 |Programmable button|
+  |GP27 | BT3 |Programmable button|
+  |GP8 | BT4 |Programmable button|
 
-| Pico | Buzzer | Function |
-|---|---|---|
-|GPIO | TFT_CS |Chip Select pin|
+  | Pico W | Hardware |
+  |---|---|
+  |GP22 | Buzzer |
+  |GP25 | LED (OnBoard Pico W) |
+- Breakout GPIOs
+  | Pico W |Physical Pin | Multi-Function |
+  |---|---|---|
+  |GP0 | 1  | General / SPI0 RX / I2C0 SDA / UART0 TX |
+  |GP1 | 2 | General / SPI0 CSn / I2C0 SCL / UART0 RX |
+  |GP2 | 4 | General / SPI0 SCK / I2C1 SDA |
+  |GP3 | 5 | General / SPI0 TX / I2C1 SCL |
+  |GP28 | 34 | General / ADC2 / SPI1 RX |
+  
 
 ## Documentation
   * [Schematic](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/blob/main/Design%20Data/SCH%203.2%20Touchsy%20%20Pico%20w%20(Resistive).pdf)
