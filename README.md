@@ -120,8 +120,9 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
    
    In similar way you can add various python code files to Pico. Also to try out sample codes given here in [examples folder](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/examples) you need to save library files from [lib](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/lib) folder into Pico W of Touchsy.
    
-   **Don't rename _lib_ files** and also you will have to move font file if used inside code, so try below method to move multiple files at once into Pico W.
-   <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/multiple_file_transfer.gif" />
+   - **Don't rename _lib_ files** and also you will have to move font file if used inside code, so try below method to move multiple files at once into Pico W.
+
+     <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/multiple_file_transfer.gif" />
 
 
 ### Example Codes
