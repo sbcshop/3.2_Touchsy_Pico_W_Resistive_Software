@@ -97,7 +97,7 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
   |GP2 | 4 | General / SPI0 SCK / I2C1 SDA |
   |GP3 | 5 | General / SPI0 TX / I2C1 SCL |
   |GP28 | 34 | General / ADC2 / SPI1 RX |
-  
+
 
 ## Documentation
   * [Schematic](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/blob/main/Design%20Data/SCH%203.2%20Touchsy%20%20Pico%20w%20(Resistive).pdf)
