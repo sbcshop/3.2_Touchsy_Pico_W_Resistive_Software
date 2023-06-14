@@ -68,11 +68,11 @@ XPT_INT = const(10)
 
 | Pico | Display | Code variables | Function |
 |---|---|---|---|
-|GP6 | SCL | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
-|GP7 | SDA | TFT_MOSI_PIN | Data IN pin of SPI interface|
-|GP13 | CS | TFT_CS_PIN   | Chip Select pin of SPI interface|
+|GP6  | SCL | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
+|GP7  | SDA | TFT_MOSI_PIN | Data IN pin of SPI interface|
+|GP13 | CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
 |GP11 | D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
-|GP14 | RST | TFT_RST_PIN | Display Reset pin|
+|GP14 | RST | TFT_RST_PIN  | Display Reset pin|
 
 | Pico | Touch | Code variables | Function |
 |---|---|---|---|
