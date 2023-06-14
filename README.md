@@ -98,7 +98,40 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
   |GP3 | 5 | General / SPI0 TX / I2C1 SCL |
   |GP28 | 34 | General / ADC2 / SPI1 RX |
 
+### 1. Step to install boot Firmware
+   - Every Touchsy board will be provided with boot firmware already installed, so you can directly go to step 2
+   - If in any case, you required to install firmware for your board, then you can follow the guide [here](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/Downloads/Pico%20W%20Micropython%20Firmware%20Installation%20Steps.pdf)
 
+### 2. Onboard LED Blink 
+   - Download **Thonny IDE** from [Download link](https://thonny.org/) as per your OS and install it.
+   - Once done start **Thonny IDE application**, Connect Touchsy with a laptop/PC using a micro USB cable and the micro USB port on Pico W present on Touchsy.
+   - Select device at the bottom right with a suitable COM port, as shown in the below figure. You might get a different COM port.
+      <img src= "https://github.com/sbcshop/EnkPi_2.9_Software/blob/main/images/img1.jpg" />
+      <img src= "https://github.com/sbcshop/EnkPi_2.9_Software/blob/main/images/img2.jpg" />
+   - Write simple onboard blink Python code or [Download Led blink code](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/examples/onboard_ledBlink.py), then click on the green run button to make your script run on Touchsy. 
+      <img src= "https://github.com/sbcshop/EnkPi_2.9_Software/blob/main/images/img3.jpg" />
+     
+     Now that we've reached this point, you're executing your script through Thonny IDE, so if you unplug Pico, it will stop running. To run your script without using an IDE, simply power up Touchsy and it should run your script, go to step 3. Once you have transferred your code to the Touchsy board, to see your script running, just plug in power either way using micro USB or Type C, both will work.
+
+### 3. How to move your script on Pico W of Touchsy
+   - Click on File -> Save Copy -> select Raspberry Pi Pico , Then save file as main.py
+     
+      <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/transfer_script_pico.gif" />
+   
+   In similar way you can add various python code files to Pico. Also to try out sample codes given here in [examples folder](https://github.com/sbcshop/EnkPi_7.5_Software/tree/main/examples) you need to save library files from [lib](https://github.com/sbcshop/EnkPi_7.5_Software/tree/main/lib) folder into Pico W of EnkPi.
+   
+   To do this follow same steps as shown in step 3 but **_to save library file don't change name keep default one:_** [EnkPi_7in5.py](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/lib/EnkPi_7in5.py), [pics.py](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/lib/pics.py)
+
+### Example Codes
+   Save whatever example code file you want to try as main.py in pico w as shown in above step 3, also add related lib files with default name.
+   - [Example 1](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_pattern.py) : This code generates pattern, you can experiment to develop your favourite one
+   - [Example 2](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_text.py) : Try this code to display text, make sure to install library EnkPi_7in5.py
+   - [Example 3](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_shapes.py) : Play with some shapes like circle, square, etc.
+   - [Example 4](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_images.py) : To display images on EnkPi, this code need library EnkPi_7in5.py & pics.py and to follow this example you have to go through [Step by Step Guide to build byte array from Image](https://github.com/sbcshop/EnkPi_2.9_Software/blob/main/Downloads/Step%20by%20Step%20Guide%20to%20create%20byte%20array%20from%20image.pdf)
+   - and [More...](https://github.com/sbcshop/EnkPi_7.5_Software/tree/main/examples)
+   
+   Now you are ready to try out your own codes, **_Happy Coding!_**
+   
 ## Documentation
   * [Schematic](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/blob/main/Design%20Data/SCH%203.2%20Touchsy%20%20Pico%20w%20(Resistive).pdf)
   * [Hardware Files](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Hardware/tree/main)
