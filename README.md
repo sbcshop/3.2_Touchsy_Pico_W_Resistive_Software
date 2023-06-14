@@ -118,9 +118,11 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
      
       <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/transfer_script_pico.gif" />
    
-   In similar way you can add various python code files to Pico. Also to try out sample codes given here in [examples folder](https://github.com/sbcshop/EnkPi_7.5_Software/tree/main/examples) you need to save library files from [lib](https://github.com/sbcshop/EnkPi_7.5_Software/tree/main/lib) folder into Pico W of EnkPi.
+   In similar way you can add various python code files to Pico. Also to try out sample codes given here in [examples folder](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/examples) you need to save library files from [lib](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/lib) folder into Pico W of Touchsy.
    
-   To do this follow same steps as shown in step 3 but **_to save library file don't change name keep default one:_** [EnkPi_7in5.py](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/lib/EnkPi_7in5.py), [pics.py](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/lib/pics.py)
+   **Don't rename _lib_ files** and also you will have to move font file if used inside code, so try below method to move multiple files at once into Pico W.
+   <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/multiple_file_transfer.gif" />
+
 
 ### Example Codes
    Save whatever example code file you want to try as main.py in pico w as shown in above step 3, also add related lib files with default name.
