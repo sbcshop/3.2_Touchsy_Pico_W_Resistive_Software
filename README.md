@@ -49,45 +49,33 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 
 - (9) Type C input power
 
-### Interfacing Info
-led = Pin(25, Pin.OUT)
-
-BL = Pin(15, Pin.OUT)
-BL.value(1)
-button1 = Pin(9, Pin.IN, Pin.PULL_UP)
-button2 = Pin(26, Pin.IN, Pin.PULL_UP)
-button3 = Pin(27, Pin.IN, Pin.PULL_UP)
-button4 = Pin(8, Pin.IN, Pin.PULL_UP)
-
-XPT_CLK_PIN = const(2)
-XPT_MOSI_PIN = const(3)
-XPT_MISO_PIN = const(4)
-
-XPT_CS_PIN = const(5)
-XPT_INT = const(10)
-
-| Pico | Display | Code variables | Function |
+### Interfacing Details
+Display and Resistive Touch controller interfacing with Pico W
+| Pico W | Display | Code variables | Function |
 |---|---|---|---|
-|GP6  | SCL | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
-|GP7  | SDA | TFT_MOSI_PIN | Data IN pin of SPI interface|
-|GP13 | CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
-|GP11 | D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
-|GP14 | RST | TFT_RST_PIN  | Display Reset pin|
+|GP6  | DC/SCL SPI | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
+|GP7  | SDI SPI/SDA | TFT_MOSI_PIN | MOSI (Master OUT Slave IN) pin of SPI interface|
+|GP13 | CS/SPI CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
+|GP11 | WR/SPI D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
+|GP14 | RESET | TFT_RST_PIN  | Display Reset pin|
 
-| Pico | Touch | Code variables | Function |
+| Pico W | Touch | Code variables | Function |
 |---|---|---|---|
-|GP2 | T_CLK | XPT_CLK_PIN  |Clock pin of SPI interface for XPT2046 touch controller|
-|GP3 | T_DIN | XPT_MOSI_PIN | Data IN pin of SPI interface|
-|GP4 |  | XPT_MISO_PIN   | Chip Select pin of SPI interface|
-|GP5 | DC | XPT_CS_PIN   | Data/Command pin of SPI interface|
-|GP10 | RST | XPT_INT | Touch controller Reset pin|
+|GP2 | DCLK | XPT_CLK_PIN  |Clock pin of SPI interface for touch controller|
+|GP3 | DIN | XPT_MOSI_PIN | MOSI (Master OUT Slave IN) data pin of SPI interface|
+|GP4 | DOUT | XPT_MISO_PIN   | MISO (Master IN Slave OUT) data pin of SPI interface|
+|GP5 | CS | XPT_CS_PIN   | Chip Select pin of SPI interface|
+|GP10 | PENIRQ | XPT_INT | Touch controller Interrupt pin|
 
 
 spi=SPI(0,sck=Pin(18),mosi=Pin(19),miso=Pin(16))
 
-| Pico | SD Card | Function |
+| Pico | microSD Card | Function |
 |---|---|---|
-|GPIO | TFT_CS |Chip Select pin|
+|GP18 | SCLK |Clock pin of SPI interface for microSD card |
+|GP19 | DIN  | MOSI (Master OUT Slave IN) data pin of SPI interface|
+|GP16 | DOUT | MISO (Master IN Slave OUT) data pin of SPI interface|
+|GP17 | CS   | Chip Select pin of SPI interface|
 
 | Pico | Buttons | Function |
 |---|---|---|
