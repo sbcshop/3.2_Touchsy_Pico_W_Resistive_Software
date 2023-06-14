@@ -50,24 +50,40 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 - (9) Type C input power
 
 ### Interfacing Info
-TFT_CLK_PIN = const(6)
-TFT_MOSI_PIN = const(7)
-TFT_MISO_PIN = const(4)
+led = Pin(25, Pin.OUT)
 
-TFT_CS_PIN = const(13)
-TFT_RST_PIN = const(14)
-TFT_DC_PIN = const(11)
+BL = Pin(15, Pin.OUT)
+BL.value(1)
+button1 = Pin(9, Pin.IN, Pin.PULL_UP)
+button2 = Pin(26, Pin.IN, Pin.PULL_UP)
+button3 = Pin(27, Pin.IN, Pin.PULL_UP)
+button4 = Pin(8, Pin.IN, Pin.PULL_UP)
 
-| Pico | Display | Code | Function |
+XPT_CLK_PIN = const(2)
+XPT_MOSI_PIN = const(3)
+XPT_MISO_PIN = const(4)
+
+XPT_CS_PIN = const(5)
+XPT_INT = const(10)
+
+| Pico | Display | Code variables | Function |
 |---|---|---|---|
-|GPIO13 | CS | | Chip Select pin|
-|GPIO | TFT_CS | |Chip Select pin|
-|GPIO | TFT_CS | |Chip Select pin|
-|GPIO | TFT_CS | |Chip Select pin|
+|GP6 | SCL | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
+|GP7 | SDA | TFT_MOSI_PIN | Data IN pin of SPI interface|
+|GP13 | CS | TFT_CS_PIN   | Chip Select pin of SPI interface|
+|GP11 | D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
+|GP14 | RST | TFT_RST_PIN | Display Reset pin|
 
-| Pico | Touch | Function |
-|---|---|---|
-|GPIO | TFT_CS |Chip Select pin|
+| Pico | Touch | Code variables | Function |
+|---|---|---|---|
+|GP2 | T_CLK | XPT_CLK_PIN  |Clock pin of SPI interface for XPT2046 touch controller|
+|GP3 | T_DIN | XPT_MOSI_PIN | Data IN pin of SPI interface|
+|GP4 |  | XPT_MISO_PIN   | Chip Select pin of SPI interface|
+|GP5 | DC | XPT_CS_PIN   | Data/Command pin of SPI interface|
+|GP10 | RST | XPT_INT | Touch controller Reset pin|
+
+
+spi=SPI(0,sck=Pin(18),mosi=Pin(19),miso=Pin(16))
 
 | Pico | SD Card | Function |
 |---|---|---|
