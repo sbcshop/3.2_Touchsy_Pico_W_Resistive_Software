@@ -17,10 +17,8 @@ XPT_CS_PIN = const(5)
 XPT_INT = const(10)
 
 def createMyDisplay():
-    spiTFT = SPI(0, baudrate=51200000,
-                 sck=Pin(TFT_CLK_PIN), mosi=Pin(TFT_MOSI_PIN))
-    display = Display(spiTFT,
-                      dc=Pin(TFT_DC_PIN), cs=Pin(TFT_CS_PIN), rst=Pin(TFT_RST_PIN),rotation=180)
+    spiTFT = SPI(0, baudrate=51200000, sck=Pin(TFT_CLK_PIN), mosi=Pin(TFT_MOSI_PIN))
+    display = Display(spiTFT, dc=Pin(TFT_DC_PIN), cs=Pin(TFT_CS_PIN), rst=Pin(TFT_RST_PIN),rotation=180)
     return display
 
 def createXPT(touch_handler):
