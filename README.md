@@ -7,7 +7,6 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 
 ### Features:
 - Official Raspberry Pi Pico W onboard for versatile programming options (Python, Arduino IDE, C, C++)
--	Available in two variants: Resistive and Capacitive touchscreen
 -	SD card slot for storage and data transfer
 -	Battery port connector with Battery Management for portable use (3.7V Lithium)
 -	4 programmable buttons for customizable control options
