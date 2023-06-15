@@ -49,52 +49,90 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 
 ### Interfacing Details
 - Display and Resistive Touch controller interfacing with Pico W
-  | Pico W | Display | Code variables | Function |
-  |---|---|---|---|
-  |GP6  | DC/SCL SPI | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
-  |GP7  | SDI SPI/SDA | TFT_MOSI_PIN | MOSI (Master OUT Slave IN) pin of SPI interface|
-  |GP13 | CS/SPI CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
-  |GP11 | WR/SPI D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
-  |GP14 | RESET | TFT_RST_PIN  | Display Reset pin|
+    | Pico W | Display | Code variables | Function |
+    |---|---|---|---|
+    |GP6  | DC/SCL SPI | TFT_CLK_PIN  |Clock pin of SPI interface for Display|
+    |GP7  | SDI SPI/SDA | TFT_MOSI_PIN | MOSI (Master OUT Slave IN) pin of SPI interface|
+    |GP13 | CS/SPI CS  | TFT_CS_PIN   | Chip Select pin of SPI interface|
+    |GP11 | WR/SPI D/C | TFT_DC_PIN   | Data/Command pin of SPI interface|
+    |GP14 | RESET | TFT_RST_PIN  | Display Reset pin|
+    |GP15 |Driven via Transistor| BL |Backlight of display|
 
-  | Pico W | Resistive Touch | Code variables | Function |
-  |---|---|---|---|
-  |GP2 | DCLK | XPT_CLK_PIN  |Clock pin of SPI interface for touch controller|
-  |GP3 | DIN | XPT_MOSI_PIN | MOSI (Master OUT Slave IN) data pin of SPI interface|
-  |GP4 | DOUT | XPT_MISO_PIN   | MISO (Master IN Slave OUT) data pin of SPI interface|
-  |GP5 | CS | XPT_CS_PIN   | Chip Select pin of SPI interface|
-  |GP10 | PENIRQ | XPT_INT | Touch controller Interrupt pin|
+  Display setting code snippets view (config.py):
+  ```
+    TFT_CLK_PIN = const(6)
+    TFT_MOSI_PIN = const(7)
+    
+    TFT_CS_PIN = const(13)
+    TFT_RST_PIN = const(14)
+    TFT_DC_PIN = const(11)
 
+    #inside createMyDisplay() method to configure display for SPI interface 
+    spiTFT = SPI(0, baudrate=51200000, sck=Pin(TFT_CLK_PIN), mosi=Pin(TFT_MOSI_PIN))
+    display = Display(spiTFT, dc=Pin(TFT_DC_PIN), cs=Pin(TFT_CS_PIN), rst=Pin(TFT_RST_PIN),rotation=180)
+  ```
+  
+    | Pico W | Resistive Touch | Code variables | Function |
+    |---|---|---|---|
+    |GP2 | DCLK | XPT_CLK_PIN  |Clock pin of SPI interface for touch controller|
+    |GP3 | DIN | XPT_MOSI_PIN | MOSI (Master OUT Slave IN) data pin of SPI interface|
+    |GP4 | DOUT | XPT_MISO_PIN   | MISO (Master IN Slave OUT) data pin of SPI interface|
+    |GP5 | CS | XPT_CS_PIN   | Chip Select pin of SPI interface|
+    |GP10 | PENIRQ | XPT_INT | Touch controller Interrupt pin|
+
+  Touch setting code snippets view(config.py):
+  ```
+    XPT_CLK_PIN = const(2)
+    XPT_MOSI_PIN = const(3)
+    XPT_MISO_PIN = const(4)  
+    XPT_CS_PIN = const(5)
+    XPT_INT = const(10)
+
+    #inside createXPT(touch_handler) method to configure touch for SPI interface 
+    spiXPT = SPI(0, baudrate=1000000, sck=Pin(XPT_CLK_PIN), mosi=Pin(XPT_MOSI_PIN), miso=Pin(XPT_MISO_PIN))
+    xpt = Touch(spiXPT, cs=Pin(XPT_CS_PIN), int_pin=Pin(XPT_INT), int_handler=touch_handler)
+  ```
 
 - Pico W and micro SD card interfacing
+    | Pico W | microSD Card | Function |
+    |---|---|---|
+    |GP18 | SCLK |Clock pin of SPI interface for microSD card |
+    |GP19 | DIN  | MOSI (Master OUT Slave IN) data pin of SPI interface|
+    |GP16 | DOUT | MISO (Master IN Slave OUT) data pin of SPI interface|
+    |GP17 | CS   | Chip Select pin of SPI interface|
 
-  | Pico W | microSD Card | Function |
-  |---|---|---|
-  |GP18 | SCLK |Clock pin of SPI interface for microSD card |
-  |GP19 | DIN  | MOSI (Master OUT Slave IN) data pin of SPI interface|
-  |GP16 | DOUT | MISO (Master IN Slave OUT) data pin of SPI interface|
-  |GP17 | CS   | Chip Select pin of SPI interface|
-
+  Sdcard setting code snippets view:
+  ```
+    spi=SPI(0,sck=Pin(18),mosi=Pin(19),miso=Pin(16))
+    sd=sdcard.SDCard(spi,Pin(17))
+  ```
+  
 - Buttons, Buzzer and LED Interfacing with Pico W
-  | Pico W | Buttons | Function |
-  |---|---|---|
-  |GP9 | BT1 |Programmable button|
-  |GP26 | BT2 |Programmable button|
-  |GP27 | BT3 |Programmable button|
-  |GP8 | BT4 |Programmable button|
+    | Pico W | Buttons | Function |
+    |---|---|---|
+    |GP9 | BT1 |Programmable button|
+    |GP26 | BT2 |Programmable button|
+    |GP27 | BT3 |Programmable button|
+    |GP8 | BT4 |Programmable button|
+  
+    | Pico W | Hardware |
+    |---|---|
+    |GP22 | Buzzer |
+    |GP25 | LED (OnBoard Pico W) |
 
-  | Pico W | Hardware |
-  |---|---|
-  |GP22 | Buzzer |
-  |GP25 | LED (OnBoard Pico W) |
+  Code snippets (main.py):
+  ``` 
+    buzzer = PWM(Pin(22)) #define PWM output
+    button1 = Pin(9, Pin.IN, Pin.PULL_UP) #define input pin with PULLUP
+  ```
 - Breakout GPIOs
-  | Pico W |Physical Pin | Multi-Function |
-  |---|---|---|
-  |GP0 | 1  | General IO / SPI0 RX / I2C0 SDA / UART0 TX |
-  |GP1 | 2 | General IO / SPI0 CSn / I2C0 SCL / UART0 RX |
-  |GP2 | 4 | General IO / SPI0 SCK / I2C1 SDA |
-  |GP3 | 5 | General IO / SPI0 TX / I2C1 SCL |
-  |GP28 | 34 | General IO / ADC2 / SPI1 RX |
+    | Pico W |Physical Pin | Multi-Function |
+    |---|---|---|
+    |GP0 | 1  | General IO / SPI0 RX / I2C0 SDA / UART0 TX |
+    |GP1 | 2 | General IO / SPI0 CSn / I2C0 SCL / UART0 RX |
+    |GP2 | 4 | General IO / SPI0 SCK / I2C1 SDA |
+    |GP3 | 5 | General IO / SPI0 TX / I2C1 SCL |
+    |GP28 | 34 | General IO / ADC2 / SPI1 RX |
 
 ### 1. Step to install boot Firmware
    - Every Touchsy board will be provided with boot firmware already installed, so you can directly go to step 2.
