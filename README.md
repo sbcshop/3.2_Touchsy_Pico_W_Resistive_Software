@@ -99,8 +99,8 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
   |GP28 | 34 | General IO / ADC2 / SPI1 RX |
 
 ### 1. Step to install boot Firmware
-   - Every Touchsy board will be provided with boot firmware already installed, so you can directly go to step 2
-   - If in any case, you required to install firmware for your board, then you can follow the guide [here](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/Downloads/Pico%20W%20Micropython%20Firmware%20Installation%20Steps.pdf)
+   - Every Touchsy board will be provided with boot firmware already installed, so you can directly go to step 2.
+   - If, in any case, you are required to install firmware for your board, then you can follow the guide [here](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/Downloads/Pico%20W%20Micropython%20Firmware%20Installation%20Steps.pdf)
 
 ### 2. Onboard LED Blink 
    - Download **Thonny IDE** from [Download link](https://thonny.org/) as per your OS and install it.
