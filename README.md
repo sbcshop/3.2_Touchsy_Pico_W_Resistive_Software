@@ -120,7 +120,7 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
     |GP22 | Buzzer |
     |GP25 | LED (OnBoard Pico W) |
 
-  Code snippets (main.py):
+  Code snippets:
   ``` 
     buzzer = PWM(Pin(22)) #define PWM output
     button1 = Pin(9, Pin.IN, Pin.PULL_UP) #define input pin with PULLUP
