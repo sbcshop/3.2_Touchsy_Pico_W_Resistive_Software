@@ -92,11 +92,11 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 - Breakout GPIOs
   | Pico W |Physical Pin | Multi-Function |
   |---|---|---|
-  |GP0 | 1  | General / SPI0 RX / I2C0 SDA / UART0 TX |
-  |GP1 | 2 | General / SPI0 CSn / I2C0 SCL / UART0 RX |
-  |GP2 | 4 | General / SPI0 SCK / I2C1 SDA |
-  |GP3 | 5 | General / SPI0 TX / I2C1 SCL |
-  |GP28 | 34 | General / ADC2 / SPI1 RX |
+  |GP0 | 1  | General IO / SPI0 RX / I2C0 SDA / UART0 TX |
+  |GP1 | 2 | General IO / SPI0 CSn / I2C0 SCL / UART0 RX |
+  |GP2 | 4 | General IO / SPI0 SCK / I2C1 SDA |
+  |GP3 | 5 | General IO / SPI0 TX / I2C1 SCL |
+  |GP28 | 34 | General IO / ADC2 / SPI1 RX |
 
 ### 1. Step to install boot Firmware
    - Every Touchsy board will be provided with boot firmware already installed, so you can directly go to step 2
