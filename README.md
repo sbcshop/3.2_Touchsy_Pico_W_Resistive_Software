@@ -19,8 +19,7 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 -	Operating voltage of pins 3.3V and board supply 5V
 -	3.2” Display with resolution 240 × 320
 -	ILI934 Display Driver
--	FT6236 capacitive touch controller (Capacitive Variant)
--	XPT2046 resistive touch controller (Resistive Variant)
+-	XPT2046 resistive touch controller 
 -	Appearance: RGB
 -	Colors: 65K/262K
 -	Viewing Angle(in degree): Left:70, Right:70, Up:50, Down:70 
