@@ -127,10 +127,10 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 
 ### Example Codes
    Save whatever example code file you want to try as main.py in pico w as shown in above step 3, also add related lib files with default name.
-   - [Example 1](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_pattern.py) : This code generates pattern, you can experiment to develop your favourite one
-   - [Example 2](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_text.py) : Try this code to display text, make sure to install library EnkPi_7in5.py
-   - [Example 3](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_shapes.py) : Play with some shapes like circle, square, etc.
-   - [Example 4](https://github.com/sbcshop/EnkPi_7.5_Software/blob/main/examples/display_images.py) : To display images on EnkPi, this code need library EnkPi_7in5.py & pics.py and to follow this example you have to go through [Step by Step Guide to build byte array from Image](https://github.com/sbcshop/EnkPi_2.9_Software/blob/main/Downloads/Step%20by%20Step%20Guide%20to%20create%20byte%20array%20from%20image.pdf)
+   - [Example 1]() : This code generates pattern, you can experiment to develop your favourite one
+   - [Example 2]() : Try this code to display text, make sure to install library EnkPi_7in5.py
+   - [Example 3]() : Play with some shapes like circle, square, etc.
+   - [Example 4]() : To display images on EnkPi, this code need library EnkPi_7in5.py & pics.py and to follow this example you have to go through [Step by Step Guide to build byte array from Image](https://github.com/sbcshop/EnkPi_2.9_Software/blob/main/Downloads/Step%20by%20Step%20Guide%20to%20create%20byte%20array%20from%20image.pdf)
    - and [More...](https://github.com/sbcshop/EnkPi_7.5_Software/tree/main/examples)
    
    Now you are ready to try out your own codes, **_Happy Coding!_**
