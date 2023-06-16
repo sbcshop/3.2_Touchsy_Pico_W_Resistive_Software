@@ -1,14 +1,14 @@
 """ILI9341 demo (shapes)."""
 from time import sleep
+import config
 from ili9341 import Display, color565
 from machine import Pin, SPI
 
+display = config.createMyDisplay()
 
 def test():
     """Test code."""
     # Baud rate of 40000000 seems about the max
-    spi = SPI(0, baudrate=40000000, sck=Pin(6), mosi=Pin(7))
-    display = Display(spi, dc=Pin(11), cs=Pin(13), rst=Pin(14),rotation = 180)
     display.clear()
 
     display.clear(color565(64, 0, 255))
