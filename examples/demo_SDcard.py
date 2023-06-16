@@ -2,7 +2,7 @@
 For this example code external library used -> sdcard.py
 from lib folder-> https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/lib
 ----------------------------------------------------------------------------------------------------
-This simple demo code creates new file as File.txt into SD card and writes 'Hello' text inside file 
+This simple demo code creates new file as File.txt into SD card and writes 'Hello World!' text inside file 
 '''                
 
 from machine import Pin, SPI ,UART
@@ -40,5 +40,5 @@ def sdtest(data):
 
     os.umount("/fc")
 while True:
-    sdtest('Hello')
+    sdtest('Hello World!')
     utime.sleep(0.5)
