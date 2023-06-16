@@ -1,3 +1,9 @@
+'''
+For this example code external library used -> ili9341.py, xglcd_font.py, config.py
+dependent touch libraries -> xpt2046.py and xpt_move.py
+from lib folder-> https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/lib
+'''
+
 from machine import Pin, SPI, Timer
 from sys import implementation
 import ili9341
@@ -38,7 +44,6 @@ display = config.createMyDisplay() #display spi setup
 xptTouch = config.createXPT(xpt_touch) #touch spi setup 
 unispace = XglcdFont('Unispace12x24.c', 12, 24) #using Unispace font
 
-display.clear()
 display.clear()
 display.draw_text(50, 25, '3.2" Touchsy', unispace,color565(0, 255, 255))
 display.draw_text(75, 50, 'Pico W', unispace,color565(0, 255, 255))
@@ -101,4 +106,3 @@ while True:
         
     time.sleep(0.02)
     
-
