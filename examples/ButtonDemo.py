@@ -30,7 +30,9 @@ BL = Pin(15, Pin.OUT) # make as OUTPUT
 BL.value(1) # set pin as HIGH i.e turns on BackLight
 
 display = config.createMyDisplay() 	#configure display spi interface in config.py
-unispace = XglcdFont('Unispace12x24.c', 12, 24) #using unispace font
+
+#using Unispace font -> https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/fonts
+unispace = XglcdFont('Unispace12x24.c', 12, 24) 
 
 
 display.clear()
