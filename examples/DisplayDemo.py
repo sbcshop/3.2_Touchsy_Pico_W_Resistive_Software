@@ -1,3 +1,4 @@
+#For this example code external library used ili9341.py, xglcd_font.py, config.py from lib folder
 from machine import Pin, SPI
 import ili9341
 from xglcd_font import XglcdFont
