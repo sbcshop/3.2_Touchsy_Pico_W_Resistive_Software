@@ -3,7 +3,9 @@ from machine import Pin, SPI
 from random import random, seed
 from ili9341 import Display, color565
 from utime import sleep_us, ticks_cpu, ticks_us, ticks_diff
+import config
 
+display = config.createMyDisplay()
 
 class Box(object):
     """Bouncing box."""
@@ -78,9 +80,6 @@ class Box(object):
 def test():
     """Bouncing box."""
     try:
-        # Baud rate of 40000000 seems about the max
-        spi = SPI(0, baudrate=40000000, sck=Pin(6), mosi=Pin(7))
-        display = Display(spi, dc=Pin(11), cs=Pin(13), rst=Pin(14),rotation = 180)
         display.clear()
 
         colors = [color565(255, 0, 0),
