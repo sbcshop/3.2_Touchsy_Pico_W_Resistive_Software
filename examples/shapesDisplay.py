@@ -8,7 +8,6 @@ display = config.createMyDisplay()
 
 def test():
     """Test code."""
-    # Baud rate of 40000000 seems about the max
     display.clear()
 
     display.clear(color565(64, 0, 255))
