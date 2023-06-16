@@ -6,7 +6,8 @@ Touchsy Pico W - the ultimate display solution for users who want an onboard con
 With Touchsy Pico W, you can easily program your display with your preferred language and use it in various projects and applications, from IoT to robotics. The **Resistive** and [**Capacitive**](https://github.com/sbcshop/3.2_Touchsy_Pico_W_Capacitive_Software/) touchscreen options allow you to choose the best option for your specific needs, and the additional GPIO pins allow you to connect more hardware to your display.
 
 ### Features:
-- Official Raspberry Pi Pico W onboard for versatile programming options (Python, Arduino IDE, C, C++)
+-   Official Raspberry Pi Pico W onboard for versatile programming options (Python, Arduino IDE, C, C++)
+-   3.2” TFT Resistive Touch Display for visual interaction
 -	SD card slot for storage and data transfer
 -	Battery port connector with Battery Management for portable use (3.7V Lithium)
 -	4 programmable buttons for customizable control options
