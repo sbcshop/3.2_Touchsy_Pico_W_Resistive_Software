@@ -1,8 +1,8 @@
 """ILI9341 demo (shapes)."""
 from time import sleep
-import config
 from ili9341 import Display, color565
 from machine import Pin, SPI
+import config
 
 display = config.createMyDisplay()
 
