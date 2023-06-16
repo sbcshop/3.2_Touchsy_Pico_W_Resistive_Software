@@ -1,3 +1,8 @@
+'''
+For this example code external library used -> ili9341.py, xglcd_font.py, config.py
+from lib folder-> https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/tree/main/lib
+'''
+
 from machine import Pin, SPI,Timer, UART,PWM
 import ili9341
 from xglcd_font import XglcdFont
