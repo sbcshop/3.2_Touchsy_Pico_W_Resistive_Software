@@ -3,6 +3,9 @@ from time import sleep
 from ili9341 import Display, color565
 from machine import Pin, SPI
 from math import cos, pi, sin
+import config
+
+display = config.createMyDisplay()
 
 HALF_WIDTH = const(120)
 HALF_HEIGHT = const(160)
@@ -51,9 +54,6 @@ def hsv_to_rgb(h, s, v):
 
 def test():
     """Test code."""
-    # Baud rate of 40000000 seems about the max
-    spi = SPI(0, baudrate=40000000, sck=Pin(6), mosi=Pin(7))
-    display = Display(spi, dc=Pin(11), cs=Pin(13), rst=Pin(14),rotation = 180)
     display.clear()
 
     x, y = 0, 0
