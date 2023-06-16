@@ -14,6 +14,8 @@ unispace = XglcdFont('Unispace12x24.c', 12, 24) #using unispace font
 
 
 display.clear()
+#method use with custom fonts-> display.draw_text(x,y,your_text, font, color)
+#method use with default font-> display.draw_text8x8(x,y,your_text, color)
 display.draw_text(50, 25, '3.2" Touchsy', unispace,color565(0, 255, 255))
 display.draw_text(75, 50, 'Pico W', unispace,color565(0, 255, 255))
 display.draw_text8x8(65, 80,' Resistive ', color565(255, 255, 0))
