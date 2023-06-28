@@ -18,7 +18,7 @@ With Touchsy Pico W, you can easily program your display with your preferred lan
 ### Specifications:
 -	Operating voltage of pins 3.3V and board supply 5V
 -	3.2” Display with resolution 240 × 320
--	ILI934 Display Driver
+-	ILI9341 Display Driver
 -	XPT2046 resistive touch controller 
 -	Appearance: RGB
 -	Colors: 65K/262K
